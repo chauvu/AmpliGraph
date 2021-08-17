@@ -6,7 +6,10 @@
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_eager_execution()
+
 from sklearn.utils import check_random_state
 import abc
 from tqdm import tqdm
