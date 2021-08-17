@@ -425,8 +425,10 @@ class Xavier(Initializer):
         -------
         initializer_instance: An Initializer instance.
         """
-        return tf.contrib.layers.xavier_initializer(uniform=self._initializer_params['uniform'],
-                                                    dtype=tf.float32)
+#         return tf.contrib.layers.xavier_initializer(uniform=self._initializer_params['uniform'],
+#                                                     dtype=tf.float32)
+        initializer = tf.keras.initializers.GlorotUniform()
+        return initializer
 
     def _get_np_initializer(self, in_shape, out_shape, concept='e'):
         """Create an initialized numpy array
